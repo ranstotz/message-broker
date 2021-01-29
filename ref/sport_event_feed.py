@@ -33,7 +33,7 @@ async def main(event_loop):
         await nats_client.publish(EVENT_TOPIC_NAME, event.SerializeToString())
         await nats_client.flush(timeout=1)
         # print("Published: ", event)
-        time.sleep(.1)
+        time.sleep(.5)
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
