@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+  
   executions:
     image: wsumfest/execution-feed:v1
     container_name: executions
@@ -13,6 +14,7 @@ services:
       - nats-streaming
     ports:
       - 4222:4222
+  
   db:
     build:
       context: "./db"
@@ -20,6 +22,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306"
+  
   nats-streaming:
     image: nats-streaming:latest
     restart: always
