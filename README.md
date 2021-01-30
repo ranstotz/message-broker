@@ -20,19 +20,6 @@ TODO:
 extra notes:
 ---------------------
 
-sport trade company
-acquired by someone
-placing devs now
-peer to peer market place for sports betting. combines sports betting with financial hedging.
-app is live (Sports Trade): asyncio (starlet)
-fastapi
-
-Meeting with Will Sumfest
-01/22/2021
-
-4 mobile
-15 eng
-
 Requirements:
 Spec: 
 1. You are given two feeds running locally, sending messages to a local NATS broker. Catalog every message with an associated timestamp into a persistent storage. These messages are serialized via protobuf (), and the spec is outlined in the repository below. 
