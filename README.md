@@ -12,10 +12,15 @@ Command for nats-streaming-server from go/bin
 This is generally working. I've connected all the pieces. Need to clean up then dockerize and provide write-up. 
 
 TODO: 
-1.) ensure requirements are met 
+1.) ensure requirements are met --- persistent storage timestamps, etc.
+  - Check, persistent storage in nss_db in table "Messages" has a timestamp on each message.
+  - See other reqs.
+1a.) refactor some of the subscription stuff into separate functions
 2.) write documentation especially for client service usage
 3.) ensure it can run at their speed (1000 messages/sec)
 4.) dockerize the entire thing
+  - Most important thing
+5.) create architecture diagram
 
 ---------------------
 extra notes:

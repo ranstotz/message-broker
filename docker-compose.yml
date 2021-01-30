@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  executions:
+    image: wsumfest/execution-feed:v1
+    container_name: executions
+  sports:
+    image: wsumfest/sport-feed:v1
+    container_name: sports
+  nats:
+    image: nats:latest
+    depends_on:
+      - nats-streaming
+    ports:
+      - 4222:4222
+  db:
+    build:
+      context: "./db"
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306"
+  nats-streaming:
+    image: nats-streaming:latest
+    restart: always
+    depends_on:
+      - db
+    command: -m 8223 -p 4223 --store SQL --sql_driver mysql --sql_source "root:pwd@tcp(db:3306)/nss_db"
+    ports:
+      - 4223:4223
+      - 8223:8223
+
+  client-service:
+    build: 
+      context: "./client_service"
+      dockerfile: "ClientDockerfile"
+
+  controller:
+    build: 
+      context: "./controller"
+      dockerfile: "ControllerDockerfile"
+
