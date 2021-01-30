@@ -19,3 +19,7 @@ Spec: 
 
 4. You will find the feeds, NATS broker, and protobuf specs here: https://bitbucket.org/will-sumfest/edge-swe-challenge/src/master/
 5. Please let us know if you are running on a system other than MacOS or Linux.
+
+
+test svg
+![Alt text](./assets/message-broker.svg)

@@ -37,9 +37,10 @@ services:
     build: 
       context: "./client_service"
       dockerfile: "ClientDockerfile"
+    restart: always
 
   controller:
     build: 
       context: "./controller"
       dockerfile: "ControllerDockerfile"
-
+    restart: always
