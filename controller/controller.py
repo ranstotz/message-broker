@@ -25,7 +25,7 @@ async def run(loop):
                      reconnected_cb=reconnected_cb,
                      disconnected_cb=disconnected_cb,
                      max_reconnect_attempts=-1,
-                     reconnect_time_wait=10,
+                     reconnect_time_wait=1,
                      loop=loop)
 
     await stan_con.connect("host.docker.internal:4223",
