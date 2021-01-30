@@ -1,20 +1,9 @@
 # message-broker
 
-SQL configuration page:
-https://docs.nats.io/nats-streaming-server/configuring/persistence/sql_store
-
-Ref to running dbs:
-https://github.com/nats-io/nats-streaming-server/issues/899
-
-Command for nats-streaming-server from go/bin
-./nats-streaming-server --port 4223 --store=SQL --sql_driver=mysql --sql_source='nss:password@(127.0.0.1:3306)/nss_db'
-
-This is generally working. I've connected all the pieces. Need to clean up then dockerize and provide write-up. 
-
 TODO: 
 1.) Requirements are met. Describe each with documentation in the README.
 2.) Create architecture diagram
-3.) Email Will with Repo (maybe change name?) and describe project/provide exctitement about using the new tech. 
+3.) Email with repo and describe project/provide exctitement about using the new tech. 
 
 ---------------------
 extra notes:
