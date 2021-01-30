@@ -1,4 +1,4 @@
-# sporttrade
+# message-broker
 
 SQL configuration page:
 https://docs.nats.io/nats-streaming-server/configuring/persistence/sql_store
