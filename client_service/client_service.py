@@ -36,7 +36,7 @@ class StreamService():
                          reconnect_time_wait=10,
                          loop=loop)
 
-        # demo client id
+        # demo client id. Each client would have a separate id ideally
         await sc.connect("test-cluster", "client-id-123", nats=nc)
 
         # example of potential subscription feed names so wildcards could be used in the future
